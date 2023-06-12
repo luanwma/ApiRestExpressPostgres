@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   /* background-color:#ADD5D0; */
+    background-image: linear-gradient(160deg,  #CC5803, #E2711D, #FF9505, #FFB627, #FFC971);   
+    height: 100vh;
+
+    font-family: 'Averia Libre';
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 87px;
+   /* background-color: #8FE1D9;*/
+    align-items: center;
+   
+}
+.classLogo{
+    display: flex;
+    flex-direction: row;
+
+}
+.classLogo a {
+    text-decoration: none;
+}
+#logo{
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+ 
+}
+#nome_logo{
+    color: #419ED7;
+    font-family: 'Averia Libre';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    text-decoration: none;
+
+}
+.corpoBody{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Averia Libre';
+    font-style: normal;
+    font-size: 24px;
+    color: #419ED7;
+    
+    
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.campo{
+    display: flex;
+    flex-direction: column;
+}

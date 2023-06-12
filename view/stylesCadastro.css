@@ -48,7 +48,7 @@ body{
 
 
 .corpoBody{
-    height: 100%;
+    height: 85%;
     display: flex;
     flex-direction: column;
   
@@ -60,11 +60,35 @@ body{
     
     font-family: 'Averia Libre';
     font-style: normal;
-    font-size: 36px;
+    font-size: 30px;
     color: #419ED7;
     
     
 }
+
+form {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+ }
 .formulario{
     
     display: flex;
@@ -109,13 +133,13 @@ body{
 
 .botaoVerde{
     width: fit-content;
-    padding: 15px;
+    padding: 5px;
     background-color: #49B976;
     border-radius: 10px;
     font-family: 'Averia Libre';
     font-style: normal;
     color: #FFFFFF;
-    font-size: 32px;
+    font-size: 22px;
     text-align: center;
     cursor: pointer;
     margin-left: 5px;
