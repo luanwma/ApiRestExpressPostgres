@@ -7,13 +7,13 @@ app.use(express.json())
 
 app.use(express.static(path.join(__dirname,'../view')))
 
-//const sequelize = require("../config/database")
-//const Routes = require('../routers/routes')
+const sequelize = require("../config/database")
+const Routes = require('../routers/routes')
 
-//sequelize.sync().then( () =>{
-//    console.log("Database conectado")
+sequelize.sync().then( () =>{
+    console.log("Database conectado")
 
-//})
+})
 
 //app.use("/api/users", Routes)
 
@@ -46,12 +46,6 @@ app.listen(process.env.port || 3000, ()=>{
     console.log('Servidor rodando -> localhost:',port)
 })
 
-//app.get('/', (req, res) =>{
-  //  const users = User("luan", "luanwma@hotmail.com")
-   // res.json(users)
-    
-  //  res.render('index', {obj})
-    //res.send('<h1>Hello World</h1>')
-//})
+
 
 module.exports= {app}

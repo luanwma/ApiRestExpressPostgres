@@ -45,18 +45,38 @@ body{
 
 }
 .corpoBody{
+    background-color: red  ;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
   
     align-items: center;
-    justify-content: center;
-    
+   /* justify-content: center; */
+   
     font-family: 'Averia Libre';
     font-style: normal;
     font-size: 24px;
     color: #419ED7;
+  
+}
+form{
+    width: 90%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.form-group2{
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    column-gap: 66px;
+    row-gap: 46px;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto ;
+}
+.form-group2 textarea{
+    height: 200px;
     
     
 }
@@ -71,4 +91,19 @@ textarea {
 .campo{
     display: flex;
     flex-direction: column;
+}
+
+.botaoVerde{
+    width: fit-content;
+    padding: 5px;
+    background-color: #49B976;
+    border-radius: 10px;
+    font-family: 'Averia Libre';
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
 }
