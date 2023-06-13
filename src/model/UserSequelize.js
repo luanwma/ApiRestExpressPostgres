@@ -1,8 +1,8 @@
 const {Model, DataTypes, Sequelize} = require("sequelize")
 const sequelize = require("../../config/database.js")
 
-const Categoria = require('./Categoria.js')
-const Receita = require('./Receita.js')
+//const Categoria = require('./Categoria.js')
+//const Receita = require('./Receita.js')
 
 //User.hasMany(Receita, {foreignKey: 'idUser'})
 //User.hasMany(Categoria, {foreignKey : 'idUser'})
@@ -10,18 +10,18 @@ const Receita = require('./Receita.js')
 
 class User extends Model{}
 User.init({
-    nameUser: {
-        type:DataTypes.STRING
+    nomeUser: {
+        type:DataTypes.TEXT
     },
     email:{
         type:DataTypes.STRING
     },
     senha: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       dataNascimento: {
-        type: Sequelize.DATEONLY,
+        type: DataTypes.DATEONLY,
         allowNull: false,
       },
       idUser :{

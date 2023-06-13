@@ -3,4 +3,4 @@ const sequelize = new Sequelize("users_bd", "user", "password" , {
     dialect : 'sqlite',
     host: "./dev.sqlite",
 })
-module.exports = sequelize
+module.exports = sequelize;

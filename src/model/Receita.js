@@ -3,7 +3,7 @@ const sequelize = require('../../config/database.js')
 
 class Receita extends Model{}
 Receita.init({
-    nameReceita :{
+    nomeReceita :{
         type:DataTypes.STRING,
         allowNull:false,
 
@@ -26,7 +26,7 @@ Receita.init({
         type:DataTypes.STRING,
     },
     idReceita :{
-        type : DataTypes.INTEGER,
+        type : Sequelize.INTEGER,
         primaryKey:true,
         autoIncrement:true,
 

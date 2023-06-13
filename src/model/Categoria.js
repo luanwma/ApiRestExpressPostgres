@@ -3,7 +3,7 @@ const sequelize = require("../../config/database.js")
 
 class Categoria extends Model{}
 Categoria.init({
-    nameCategoria:{
+    nomeCategoria:{
         type: DataTypes.STRING,
         allowNull:false,
         

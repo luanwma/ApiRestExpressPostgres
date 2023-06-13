@@ -12,7 +12,7 @@ const Routes = require('../routers/routes')
 
 sequelize.sync().then( () =>{
     console.log("Database conectado")
-
+    
 })
 
 //app.use("/api/users", Routes)
@@ -34,7 +34,7 @@ app.get('/cadastro_usuario', (req, res) =>{
 
 app.get('/cadastro_receita', (req, res ) =>{
 
-    
+
     res.sendFile(path.join(__dirname, '../view', 'cadastro_receita.html'))
 
 })
