@@ -17,7 +17,11 @@ sequelize.sync().then( () =>{
 
 //app.use("/api/users", Routes)
 
-app.get('/', (req, res) =>{
+app.get('/' , (req, res) =>{
+    res.sendFile(path.join(__dirname, '../view', 'login.html'))
+})
+
+app.get('/login', (req, res) =>{
    
     res.sendFile(path.join(__dirname, '../view', 'login.html'))
 })
@@ -31,17 +35,29 @@ app.get('/cadastro_usuario', (req, res) =>{
 })
 
 
-
 app.get('/cadastro_receita', (req, res ) =>{
-
 
     res.sendFile(path.join(__dirname, '../view', 'cadastro_receita.html'))
 
 })
 
+app.get('/minhas_receitas', (req, res ) =>{
 
-app.get('/ferramentas_utilizadas', (req, res) =>{
-    res.sendFile(path.join(__dirname, '../view', 'ferramentas_utilizadas'))
+    res.sendFile(path.join(__dirname, '../view', 'minhas_receitas.html'))
+
+})
+
+app.get('/cadastro_categoria', (req, res) =>{
+    res.sendFile(path.join(__dirname , '../view' , 'cadastro_categoria.html'))
+})
+
+app.get('/contato' , (req, res) => {
+    res.sendFile(path.join(__dirname, '../view', 'contato.html'))
+})
+
+
+app.get('/sobre', (req, res) =>{
+    res.sendFile(path.join(__dirname, '../view', 'sobre.html'))
 })
 
 

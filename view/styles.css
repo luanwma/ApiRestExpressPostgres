@@ -13,10 +13,11 @@ body{
 
 .container{
     display: flex;
+    
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 87px;
-   /* background-color: #8FE1D9;*/
+    /*background-color: #8FE1D9; */
     align-items: center;
    
 }
@@ -44,6 +45,46 @@ body{
     font-size: 30px;
     text-decoration: none;
 
+}
+/*MENU*/
+
+.btnCadastrarMenu{
+    width: fit-content;
+    padding: 5px;
+    background-color: #49B976;
+    border-radius: 10px;
+    font-family: 'Averia Libre';
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.btnCadastrarMenu:hover{
+    background-color: #2ea55d;
+}
+.menu li{
+    display: inline;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 10px;
+    
+    
+    border-radius: 10px;
+}
+.textMenu{
+    color: #419ED7;
+}
+.menu li:hover{
+    background-color: #FFC971;
+    text-decoration-color: #419ED7;
+    color:blue;
+    
+}
+.menu li::after{
+    color: #419ED7;
 }
 
 
@@ -99,7 +140,7 @@ body{
 }
 #idCadastrar{
     font-family: 'Averia Libre';
-    font-size: 25px;
+    font-size: 20px;
     color: #3F92C5;
     text-decoration: none;
 }
@@ -147,9 +188,9 @@ body{
 .divRecuperarSenha{
     display: flex;
     flex-direction: column;
-    font-size: 24px;
+    font-size: 16px;
     align-self: center;
-    margin-top: 20px;
+    margin-top: 0px;
     text-decoration: none;
    
 }
@@ -160,7 +201,7 @@ body{
 }
 
 #recuperaSenha{
-    font-size: 24px;
+    font-size: 16px;
     font-family: 'Averia Libre';
     font-style: normal;
     font-weight: 400;
@@ -172,7 +213,7 @@ body{
     display: flex;
     flex-direction: row;
     align-self: center;
-    
+
     text-decoration: none;
 }
 .btn_recuperar{
@@ -182,7 +223,7 @@ border-radius: 20px;
 font-family: 'Averia Libre';
 padding: 10px;
 color: #FFFFFF;
-font-size: 24px;
+font-size: 20px;
 border-style: solid 2px ;
 stroke: #37BD6D;
 
