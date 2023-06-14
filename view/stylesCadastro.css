@@ -11,40 +11,6 @@ body{
     font-family: 'Averia Libre';
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 87px;
-   /* background-color: #8FE1D9;*/
-    align-items: center;
-   
-}
-
-.classLogo{
-    display: flex;
-    flex-direction: row;
-
-}
-.classLogo a {
-    text-decoration: none;
-}
-#logo{
-    margin-left: 30px;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
- 
-}
-#nome_logo{
-    color: #419ED7;
-    font-family: 'Averia Libre';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    text-decoration: none;
-
-}
 
 
 .corpoBody{

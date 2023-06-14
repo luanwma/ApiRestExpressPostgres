@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="stylesCadastro.css">
+        <link rel="stylesheet" href="header.css">
         <title id="title">Pagina inicial</title>
     
     </head>
@@ -13,30 +14,7 @@
 
     <body>
         <header>
-            <nav class="container">
-                <div class="logo">
-                    
-                        <img src="./imagens/logo.png" alt="Logo CookBook" id="logo">
-                    <!--<img src="../imagens/logo.png" alt="Logo CookBook" id="logo"> -->
-                        <a href="" id="nome_logo" > CookBook </a>
-
-                </div>
-                
-                <div class="">
-                    <ul class="menu">
-                        <li > <a href="cadastro_receita" class="textMenu"> Cadastra Receita</a></li>
-                        <li > <a href="cadastro_categoria" class="textMenu"> Cadastrar Categoria</a></li>
-                        <li > <a href="minhas_receitas" class="textMenu"> Minhas Receitas </a></li>
-                        <li > <a href="contato" class="textMenu"> Contato </a></li>
-                        <li > <a href="sobre" class="textMenu"> Sobre </a></li>
-                    </ul>
-                </div>
-                <div>
-                    <div  >
-                        <button id="btnCadastrar" class="btnCadastrarMenu" > Cadastrar </button>
-                     </div>
-                </div>
-            </nav>
+           {{> header}}
         </header>
 
         <div class="corpoBody">

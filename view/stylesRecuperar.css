@@ -1,7 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     /* background-color:#ADD5D0; */
      background-image: linear-gradient(160deg,  #CC5803, #E2711D, #FF9505, #FFB627, #FFC971);   
-     width: 100vh ;
+    
      height: 100vh;
  
      font-family: 'Averia Libre';
@@ -33,30 +37,6 @@ body{
     justify-content: center; 
 }
 
-.classLogo{
-    display: flex;
-    flex-direction: row;
-
-}
-.classLogo a {
-    text-decoration: none;
-}
-#logo{
-    margin-left: 30px;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
- 
-}
-#nome_logo{
-    color: #419ED7;
-    font-family: 'Averia Libre';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    text-decoration: none;
-
-}
 
 .rotulos{
     display: flex;

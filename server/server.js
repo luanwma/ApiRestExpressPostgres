@@ -28,6 +28,41 @@ app.get('/' , (req, res) =>{
 })
 
 app.get('/login', (req, res) =>{
+    res.render('login')
+})
+
+app.get('/recuperar_senha', (req, res) =>{
+    res.render('recuperar_senha')
+})
+
+app.get('/cadastro_usuario', (req, res) =>{
+    res.render('cadastro_usuario')
+})
+
+app.get('/cadastro_receita', (req, res) =>{
+    res.render('cadastro_receita')
+})
+
+app.get('/minhas_receitas', (req, res) =>{
+    res.render('minhas_receitas')
+})
+
+app.get('/cadastro_categoria', (req, res) =>{
+    res.render('cadastro_categoria')
+})
+
+app.get('/contato', (req, res) =>{
+    res.render('contato')
+})
+
+app.get('/sobre', (req, res) =>{
+    res.render('sobre')
+})
+app.get('/tecnologias', (req, res) =>{
+    res.render('tecnologias')
+})
+/*
+app.get('/login', (req, res) =>{
    
     res.sendFile(path.join(__dirname, '../view', 'login.mustache'))
 })
@@ -65,6 +100,7 @@ app.get('/contato' , (req, res) => {
 app.get('/sobre', (req, res) =>{
     res.sendFile(path.join(__dirname, '../view', 'sobre.html'))
 })
+*/
 
 
 app.listen(process.env.port || 3000, ()=>{
