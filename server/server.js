@@ -1,10 +1,16 @@
 const express = require('express')
 const path = require('path')
+const mustacheExpress = require('mustache-express');
 const app = express()
 const port = 3000   
 
 app.use(express.json())
-
+//mustache
+app.set('views', path.join(__dirname,'../view'));
+app.set('view engine', 'mustache');
+app.engine('mustache', mustacheExpress());
+//mustache
+//css
 app.use(express.static(path.join(__dirname,'../view')))
 
 const sequelize = require("../config/database")
@@ -18,12 +24,12 @@ sequelize.sync().then( () =>{
 //app.use("/api/users", Routes)
 
 app.get('/' , (req, res) =>{
-    res.sendFile(path.join(__dirname, '../view', 'login.html'))
+    res.render('login')
 })
 
 app.get('/login', (req, res) =>{
    
-    res.sendFile(path.join(__dirname, '../view', 'login.html'))
+    res.sendFile(path.join(__dirname, '../view', 'login.mustache'))
 })
 
 app.get('/recuperar_senha', (req, res) =>{
