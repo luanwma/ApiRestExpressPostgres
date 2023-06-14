@@ -61,6 +61,12 @@ app.get('/sobre', (req, res) =>{
 app.get('/tecnologias', (req, res) =>{
     res.render('tecnologias')
 })
+
+app.post('/cadastro_receitas', (req, res) =>{
+    const {titulo} = req.body;
+})
+
+
 /*
 app.get('/login', (req, res) =>{
    
