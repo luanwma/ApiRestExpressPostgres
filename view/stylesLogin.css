@@ -3,10 +3,12 @@
     padding: 0;
 }
 
-body{
+html ,body{
    /* background-color:#ADD5D0; */
     background-image: linear-gradient(160deg,  #CC5803, #E2711D, #FF9505, #FFB627, #FFC971);   
-    height: 100vh;
+    /*height: 100vh; */
+   height: 100vh;
+   
 
     font-family: 'Averia Libre';
 }
@@ -14,7 +16,7 @@ body{
 
 
 .corpoBody{
-    height: 100%;
+    height: 75%;
     display: flex;
     flex-direction: column;
   
@@ -26,7 +28,6 @@ body{
     font-style: normal;
     font-size: 30px;
     color: #419ED7;
-    
     
 }
 .formulario{
@@ -103,7 +104,7 @@ body{
     font-family: 'Averia Libre';
     font-style: normal;
     color: #FFFFFF;
-    font-size: 22px;
+    font-size: 14px;
     text-align: center;
     cursor: pointer;
     margin-left: 5px;

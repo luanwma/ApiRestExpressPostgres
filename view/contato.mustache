@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="stylesCadastro.css">
+        <link rel="stylesheet" href="stylesContato.css">
         <link rel="stylesheet" href="header.css">
-        <title id="title">Pagina inicial</title>
+        <title id="title">Contato</title>
     
     </head>
 
@@ -17,29 +17,36 @@
             {{> header}}
         </header>
 
-        <div class="corpoBody">
+        <form class="corpoBody" action="https://formsubmit.co/ajax/luanwma@hotmail.com" method="POST">
 
             
             <div class="formulario">
                 <div class="rotulos">
+                    <label class="input-label" for="nome">Nome</label>
                     <label class="input-label" for="email">Email</label>
-                    <label class="input-label" for="senha">Senha</label>
+                    <label class="input-label" for="assunto">Assunto</label>
+                    <label class="input-label" for="mensagem">Mensagem</label>
     
                 </div>
                 <div class="entradasDados">
+
+                    <input name="nome" id="nome" type="text" required class="txtEntrada">
     
                     <input name="email" id="email" type="email" placeholder="Insira seu email" data-tipo="email" required class="txtEntrada">
-    
-                    <input class="txtEntrada" name="senha" id="senha"  type="password" placeholder="Digite sua senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
-                    title="A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos." data-tipo="senha" required>
-    
+                    <input class="txtEntrada" name="assunto" id="assunto"  type="text"  data-tipo="text" required>
+                    <textarea class="txtEntrada" name="mensagem" id="mensagem"  type="text"  data-tipo="textarea" required>
+                    
+                    </textarea>
+                    
                 </div>
-
                 
 
             </div>
+            <div class="">
+                <button class="botaoVerde" id="btnEnviar" >enviar</button>
+            </div>
             
-        </div>
+        </form>
 
 
     </body>
