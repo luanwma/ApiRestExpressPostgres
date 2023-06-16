@@ -45,7 +45,7 @@ form {
 
 
   .formulario{
-    background-color:#ccc;
+    
     display: flex;
     flex-direction: row; 
     align-items: center;
