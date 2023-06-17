@@ -5,3 +5,8 @@ p{
     margin-left: 2%;
     margin-right: 2%;
 }
+p a{
+    text-decoration: none;
+    color: blue;
+    
+}

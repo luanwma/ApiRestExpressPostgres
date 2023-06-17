@@ -12,6 +12,7 @@ body{
 }
 
 .corpoBody{
+    
     height: 85%;
     display: flex;
     flex-direction: column;
@@ -51,7 +52,7 @@ form {
     align-items: center;
     justify-content: center;
     width: 80%;
-    height: 80vh;
+    height: fit-content;
     text-align: center;
     font-family: 'Averia Libre';
     font-style: normal;

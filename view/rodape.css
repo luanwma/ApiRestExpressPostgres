@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    margin-bottom: 1%;
 }
 .rodape a {
     text-decoration: none;

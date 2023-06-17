@@ -16,6 +16,7 @@ html ,body{
 
 
 .corpoBody{
+    
     height: 75%;
     display: flex;
     flex-direction: column;
@@ -26,8 +27,9 @@ html ,body{
     width: 100%;
     font-family: 'Averia Libre';
     font-style: normal;
-    font-size: 30px;
+    font-size: 24px;
     color: #419ED7;
+    
     
 }
 .formulario{
@@ -42,7 +44,7 @@ html ,body{
     text-align: center;
     font-family: 'Averia Libre';
     font-style: normal;
-    font-size: 30px;
+    font-size: 24px;
     color: #419ED7;
 
 }
