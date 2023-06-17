@@ -1,7 +1,7 @@
 
 
 
-    /*
+    
     class User{
         constructor(id, nome, email){
             this.id = id;
@@ -53,4 +53,3 @@
 const userList = new UsersList()
 export default userList
 
-*/

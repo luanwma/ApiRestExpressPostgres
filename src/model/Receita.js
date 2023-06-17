@@ -36,9 +36,9 @@ Receita.init({
     modelName : "receitas",
     timestamps : false
 }
-/*
+
 Receita.belongsTo(Categoria , {
     foreignKey: 'idCategoria'
-}) */
+}) 
 
 module.exports = Receita
