@@ -20,30 +20,7 @@ body{
     align-items: center;
    
 }
-.classLogo{
-    display: flex;
-    flex-direction: row;
 
-}
-.classLogo a {
-    text-decoration: none;
-}
-#logo{
-    margin-left: 30px;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
- 
-}
-#nome_logo{
-    color: #419ED7;
-    font-family: 'Averia Libre';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    text-decoration: none;
-
-}
 
 /*MENU*/
 
@@ -89,7 +66,7 @@ body{
 
 
 .corpoBody{
-  
+    background-color: #2ea55d;
     height: 100%;
     width: 100%;
     display: flex;
@@ -100,9 +77,9 @@ body{
    
     font-family: 'Averia Libre';
     font-style: normal;
-    font-size: 24px;
+    font-size: 20px;
     color: #419ED7;
-  
+    margin-bottom: 10px; 
 }
 form{
     width: 90%;

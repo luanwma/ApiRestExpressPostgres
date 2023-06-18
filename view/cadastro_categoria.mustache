@@ -7,7 +7,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="stylesCadastro.css">
         <link rel="stylesheet" href="header.css">
-        <title id="title">Pagina inicial</title>
+        <link rel="stylesheet" href="rodape.css">
+        <title id="title">Cadastro Categoria</title>
     
     </head>
 
@@ -18,30 +19,40 @@
         </header>
 
         <div class="corpoBody">
+            <h2> Cadastro de nova Categoria </h2>
 
             
             <div class="formulario">
                 <div class="rotulos">
-                    <label class="input-label" for="email">Email</label>
-                    <label class="input-label" for="senha">Senha</label>
+                    <label class="input-label" for="nomecategoria">Nome </label>
+                    <label class="input-label" for="descricao">Descrição</label>
     
                 </div>
                 <div class="entradasDados">
     
-                    <input name="email" id="email" type="email" placeholder="Insira seu email" data-tipo="email" required class="txtEntrada">
+                    <input name="nomecategoria" id="nomecategoria" type="text"  data-tipo="text" required class="txtEntrada">
     
-                    <input class="txtEntrada" name="senha" id="senha"  type="password" placeholder="Digite sua senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
-                    title="A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos." data-tipo="senha" required>
+                    <textarea class="txtEntrada" name="descricao" id="descricaocategoria"  type="text"  data-tipo="textarea" required>
+                    
+                     </textarea>
     
                 </div>
 
                 
 
             </div>
+            <div class=""> <a > 
+            <button id="btnCadastrarReceita" class="botaoVerde" >
+                Cadastrar
+            </button></a>
+            
+        </div>
             
         </div>
 
-
+        <footer>
+            {{> rodape}}
+        </footer>
     </body>
 
 

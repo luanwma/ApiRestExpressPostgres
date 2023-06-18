@@ -21,6 +21,11 @@ sequelize.sync().then( () =>{
     
 })
 
+//envio de email
+const nodemailer = require('nodemailer')
+
+
+
 //app.use("/api/users", Routes)
 
 app.get('/' , (req, res) =>{
