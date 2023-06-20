@@ -115,7 +115,7 @@ app.get('/sobre', (req, res) =>{
 
 
 app.listen(process.env.port || 3000, ()=>{
-    console.log('Servidor rodando -> localhost:',port)
+    console.log('Servidor rodando ->' +'http://localhost:'+port)
 })
 
 
