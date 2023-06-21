@@ -23,10 +23,12 @@ sequelize.sync().then( () =>{
     
 })
 
+
+/*
 const nodemailer = require('nodemailer')
 //envio de email
 require('dotenv').config()
-
+*/
 
 
 
@@ -71,7 +73,10 @@ app.get('/contato', (req, res) =>{
 app.post('/contato', (req, res) =>{
     const {nome, email, assunto, mensagem} = req.body
     console.log("nome -> ",nome," email -> ",email ," assunto -> ",assunto ," msg -> ",mensagem)
-    let transporter = nodemailer.createTransport({
+   
+    transporter
+   
+   /* let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 587,
         secure: false, // true for 465, false for other ports
@@ -108,7 +113,7 @@ app.post('/contato', (req, res) =>{
         }
       });
 
-      
+     */ 
 })
 
 

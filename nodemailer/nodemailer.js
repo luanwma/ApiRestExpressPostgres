@@ -1,49 +1,45 @@
-const express = require('express')
-const app = express()
+
 const nodemailer = require('nodemailer')
-//import nodemailer from "nodemailer"
-//import SMPTransport  from "nodemailer-smtp-transport"
-const SMPTransport = require('nodemailer-smtp-transport')
 
-
-
-//const app = require('../server/server')
-
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+require('dotenv').config()
 
 let transporter = nodemailer.createTransport({
-    host: "gmail",
+    host: "smtp.gmail.com",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL_USER, // generated ethereal user
       pass: process.env.EMAIL_PASS // generated ethereal password
-    },
+    }
   });
 
-  app.post('/contato' , (req, res) =>{
-    const {nome, email, assunto, mensagem} = req.body
-    const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: email,
-        subject: assunto,
+  console.log("email",email)
+  const mailBody = {
+     sender:email,
+      replyTo: email,
+      to: process.env.EMAIL_USER,
+      subject: assunto,
+      text: mensagem,
+  
 
-        text: `Nome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}`
-      };
+     // text: `Nome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}`
+    };
 
 
-      transporter.sendMail(mailOptions, (error, info) => {
+    console.log(mailBody)
+
+      transporter.sendMail(mailBody, (error, info) => {
         if (error) {
           console.log(error);
           res.send('Ocorreu um erro no envio da mensagem.');
         } else {
           console.log('Mensagem enviada: ' + info.response);
           res.send('Mensagem enviada com sucesso!');
+          window.location.href = 'login'
         }
       });
-  })
+
+ 
 
  
 
