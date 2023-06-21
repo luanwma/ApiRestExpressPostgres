@@ -15,14 +15,22 @@ app.use(express.static(path.join(__dirname,'../view')))
 
 const sequelize = require("../config/database")
 const Routes = require('../routers/routes')
-
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 sequelize.sync().then( () =>{
     console.log("Database conectado")
     
 })
 
-//envio de email
 const nodemailer = require('nodemailer')
+//envio de email
+const dotenv = require('dotenv').config()
+
+
+
+
+
 
 
 
@@ -59,6 +67,47 @@ app.get('/cadastro_categoria', (req, res) =>{
 app.get('/contato', (req, res) =>{
     res.render('contato')
 })
+app.post('/contato', (req, res) =>{
+    const {nome, email, assunto, mensagem} = req.body
+    console.log("nome -> ",nome," email -> ",email ," assunto -> ",assunto ," msg -> ",mensagem)
+    let transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+          user: process.env.EMAIL_USER, // generated ethereal user
+          pass: process.env.EMAIL_PASS // generated ethereal password
+        }
+      });
+
+
+
+    
+    const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: email,
+        subject: assunto,
+        text: mensagem,
+    
+
+       // text: `Nome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}`
+      };
+      console.log(mailOptions)
+
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.log(error);
+          res.send('Ocorreu um erro no envio da mensagem.');
+        } else {
+          console.log('Mensagem enviada: ' + info.response);
+          res.send('Mensagem enviada com sucesso!');
+        }
+      });
+
+      
+})
+
+
 
 app.get('/sobre', (req, res) =>{
     res.render('sobre')

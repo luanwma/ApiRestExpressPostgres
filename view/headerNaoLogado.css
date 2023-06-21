@@ -45,7 +45,7 @@
 }
 
 
-.btnCadastrarMenu{
+.btnCadastrar{
     width: fit-content;
     padding: 5px;
     background-color: #49B976;
@@ -59,9 +59,10 @@
     margin-left: 5px;
     margin-right: 5px;
 }
-.btnCadastrarMenu:hover{
+.btnCadastrar:hover{
     background-color: #2ea55d;
 }
+
 .menu li{
     display: inline;
     list-style-type: none;

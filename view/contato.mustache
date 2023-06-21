@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="stylesContato.css">
-        <link rel="stylesheet" href="header.css">
+        
         <link rel="stylesheet" href="rodape.css">
         <title id="title">Contato</title>
     
@@ -15,12 +15,12 @@
 
     <body>
         <header>
-            {{> header}}
+            {{> headerNaoLogado}}
         </header>
         <!-- "https://api.staticforms.xyz/submit" 
             https://formsubmit.co/ajax/luanwma@hotmail.com
         -->
-        <form class="corpoBody" action="https://api.staticforms.xyz/submit" method="POST">
+        <form class="corpoBody" action="/contato" method="POST">
 
             
             <div class="formulario">
@@ -34,13 +34,10 @@
                 </div>
                 <div class="entradasDados">
 
-                    <input name="name" id="nome" type="name" required class="txtEntrada" autocomplete="off">
-    
-                    <input name="email" id="email" type="email" placeholder="Insira seu email" data-tipo="email" required class="txtEntrada" autocomplete="off" >
-                    <input class="txtEntrada" name="subject" id="assunto"  type="text"  data-tipo="text" required autocomplete="off">
-                    <textarea class="txtEntrada" name="message" id="mensagem"  type="text"  data-tipo="textarea" required autocomplete="off">
-                    
-                    </textarea>
+                    <input name="nome" id="nome" type="name" required class="txtEntrada" autocomplete="off" value="nome teste" >     
+                    <input name="email" id="email" type="email" placeholder="Insira seu email" data-tipo="email" required class="txtEntrada" autocomplete="off"  value="luanwma@hotmail.com" >
+                    <input class="txtEntrada" name="assunto" id="assunto"  type="text"  data-tipo="text" required autocomplete="off" value="assunto teste">
+                    <textarea class="txtEntrada" name="mensagem" id="mensagem"  type="text"  data-tipo="textarea" required autocomplete="on" >msg teste</textarea>
                     <input type="hidden" name="redirectTo" value="http://localhost:3000/minhas_receitas">
                     
                 </div>

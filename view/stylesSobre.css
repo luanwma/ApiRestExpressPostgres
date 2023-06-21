@@ -14,20 +14,27 @@ body{
 
 .corpoBody{
     
+    
     height: 75%;
     display: flex;
     flex-direction: column;
   
     align-items: center;
     justify-content: center;
+
     
     width: 100%;
-    
     
     font-family: 'Averia Libre';
     font-style: normal;
     font-size: 20px;
     color: #419ED7;
     
+    
+}
+.corpoBody div{
+    background-color: white;
+    padding: 2%;
+    width: fit-content;
     
 }
