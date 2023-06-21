@@ -25,7 +25,8 @@ sequelize.sync().then( () =>{
 
 const nodemailer = require('nodemailer')
 //envio de email
-const dotenv = require('dotenv').config()
+require('dotenv').config()
+console.log(process.env.EMAIL_USER)
 
 
 
@@ -84,8 +85,8 @@ app.post('/contato', (req, res) =>{
 
     
     const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: email,
+        from: email ,
+        to: process.env.EMAIL_USER,
         subject: assunto,
         text: mensagem,
     
