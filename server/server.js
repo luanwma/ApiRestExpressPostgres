@@ -26,7 +26,7 @@ sequelize.sync().then( () =>{
 const nodemailer = require('nodemailer')
 //envio de email
 require('dotenv').config()
-console.log(process.env.EMAIL_USER)
+
 
 
 
@@ -83,9 +83,10 @@ app.post('/contato', (req, res) =>{
 
 
 
-    
-    const mailOptions = {
-        from: email ,
+    console.log("email",email)
+    const mailBody = {
+       sender:email,
+        replyTo: email,
         to: process.env.EMAIL_USER,
         subject: assunto,
         text: mensagem,
@@ -93,15 +94,17 @@ app.post('/contato', (req, res) =>{
 
        // text: `Nome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}`
       };
-      console.log(mailOptions)
 
-      transporter.sendMail(mailOptions, (error, info) => {
+      console.log(mailBody)
+
+      transporter.sendMail(mailBody, (error, info) => {
         if (error) {
           console.log(error);
           res.send('Ocorreu um erro no envio da mensagem.');
         } else {
           console.log('Mensagem enviada: ' + info.response);
           res.send('Mensagem enviada com sucesso!');
+          window.location.href = 'login'
         }
       });
 
