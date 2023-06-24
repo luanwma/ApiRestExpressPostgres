@@ -13,8 +13,8 @@ let transporter = nodemailer.createTransport({
     }
   });
 
-  console.log("email",email)
-  const mailBody = {
+ 
+ /* const mailBody = {
      sender:email,
       replyTo: email,
       to: process.env.EMAIL_USER,
@@ -23,7 +23,20 @@ let transporter = nodemailer.createTransport({
   
 
      // text: `Nome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}`
-    };
+    }; */
+    mailBody = {}
+
+    function setMessage( mailBody){
+      const {nome, emailRemetente, assunto, mensagem} = mailBody
+      mailBody = {
+        name: nome,
+        sender:emailRemetente,
+        replyTo: emailRemetente,
+        to: process.env.EMAIL_USER,
+        subject: assunto,
+        text: mensagem,
+      }
+    }
 
 
     console.log(mailBody)
@@ -42,8 +55,8 @@ let transporter = nodemailer.createTransport({
  
 
  
-
-  exports =  {transporter,nodemailer }
+  
+  module.exports =  {transporter,nodemailer, setMessage }
 
 
  

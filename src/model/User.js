@@ -1,8 +1,36 @@
+   const {Model, DataTypes} = require('sequelize')
+   const sequelize = require('../../config/database')
 
 
+   // class User extends Model {}
 
+   const User = sequelize.define('User', { 
+        
+            userid: {type :DataTypes.INTEGER, allowNull:false, primaryKey: true, autoIncrement: true},
+            nome:{ type: DataTypes.STRING, allowNull: false},
+            email:{ type: DataTypes.STRING, allowNull: false , unique:true},
+            password:{ type: DataTypes.STRING, allowNull: false},
+            dataNascimento : {
+                type: DataTypes.DATEONLY,
+                allowNull: false,
+            },
+
+
+            
+         }, {
+            sequelize : sequelize,
+            modelName : "users",
+            timestamps : true
+         })
+        
+
+       
+        
     
-    class User{
+    
+    module.exports = User
+        /*
+    class User extends Model{
         constructor(id, nome, email){
             this.id = id;
             this.nome = nome;
@@ -48,8 +76,10 @@
             return false
         }
 
-    }
+    } 
+    */
 
-const userList = new UsersList()
-export default userList
+
+//const userList = new UsersList()
+
 

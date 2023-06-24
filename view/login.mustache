@@ -17,10 +17,10 @@
         {{> headerNaoLogado}}
       
 
-        <div class="corpoBody">
+        <form class="corpoBody" action="/login" method="POST">
 
             
-            <div class="formulario">
+            <div class="formulario" >
                 <div class="rotulos">
                     <label class="input-label" for="email">Email</label>
                     <label class="input-label" for="senha">Senha</label>
@@ -30,18 +30,19 @@
     
                     <input name="email" id="email" type="email" placeholder="Insira seu email" data-tipo="email" required class="txtEntrada">
     
-                    <input class="txtEntrada" name="senha" id="senha"  type="password" placeholder="Digite sua senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
+                    <input class="txtEntrada" name="password" id="senha"  type="password" placeholder="Digite sua senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
                     title="A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos." data-tipo="senha" required>
     
                 </div>
-
+                
                 
 
             </div>
-
             <div class="" >
-                <button id="btnEntrar" class="botaoVerde" > Entrar </button>
-             </div>
+                        <input type="submit" value="Entrar" id="btnLogin" class="botaoVerde" />
+                </div>
+
+          
             <div class="cadastre">
                 <a href="cadastro_usuario" id="idCadastrar"> Cadastre-se</a> 
             </div>
@@ -55,7 +56,7 @@
                 <a href="recuperar_senha" id="recuperaSenha" >Esqueci minha senha</a>
             </div>
 
-        </div>
+        </form>
         <footer>
             {{> rodape}}
         </footer>

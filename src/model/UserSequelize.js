@@ -1,4 +1,4 @@
-const {Model, DataTypes, Sequelize} = require("sequelize")
+const {Model, DataTypes} = require("sequelize")
 const sequelize = require("../../config/database.js")
 
 //const Categoria = require('./Categoria.js')
@@ -24,11 +24,7 @@ User.init({
         type: DataTypes.DATEONLY,
         allowNull: false,
       },
-      idUser :{
-        type : Sequelize.INTEGER,
-        primaryKey:true,
-        autoIncrement:true,
-      }
+      userid: {type :DataTypes.INTEGER, allowNull:false, primaryKey: true, autoIncrement: true}
 },{
     sequelize,
     modelName:"users",

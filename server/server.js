@@ -3,8 +3,19 @@ const path = require('path')
 const mustacheExpress = require('mustache-express');
 const app = express()
 const port = 3000   
-
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
+
+//jwt instalar jsonwebtoken
+const jwt = require('jsonwebtoken');
+//importa o arquivo com as credenciais
+
+
+
+
+
+
 //mustache
 app.set('views', path.join(__dirname,'../view'));
 app.set('view engine', 'mustache');
@@ -14,30 +25,34 @@ app.engine('mustache', mustacheExpress());
 app.use(express.static(path.join(__dirname,'../view')))
 
 const sequelize = require("../config/database")
-const Routes = require('../routers/routes')
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+
+const usersController =  require('../routes/rotasUser')
+
+//app.get('/', usersController.get)
+
 sequelize.sync().then( () =>{
     console.log("Database conectado")
     
 })
 
 
-
-const nodemailer = require('nodemailer')
 //envio de email
+const nodemailer = require('nodemailer')
+//chamando dotenv
 require('dotenv').config()
 
 
 
+//rotas
+const router = require('../routes/rotas.js')
+const routerUser = require('../routes/rotasUser.js')
 
-
-
-
+app.use(router)
+app.use(routerUser)
 
 
 //app.use("/api/users", Routes)
+/*
 
 app.get('/' , (req, res) =>{
     res.render('login')
@@ -172,9 +187,15 @@ app.get('/sobre', (req, res) =>{
 */
 
 
-app.listen(process.env.port || 3000, ()=>{
-    console.log('Servidor rodando ->' +'http://localhost:'+port)
-})
+app.listen(process.env.PORT || 3000, ()=>{
+    if(process.env.PORT){
+        console.log('Server running on -> '+'htp://localhost:'+process.env.PORT)
+    }else{
+        console.log('Servidor rodando ->' +'http://localhost:'+port)
+
+    }
+
+    })
 
 
 
