@@ -8,7 +8,10 @@ require('dotenv').config()
 const private_key ='minha_chave'
 
 
-
+//usuarios criados
+//luanwma@hotmail.com luanwill
+//will.marques1990@gmail.com teste123
+//will.mq@gmail.com teste123
 exports.createUser = async (req, res) =>{
     
     const nome = req.body.nome
@@ -23,7 +26,8 @@ exports.createUser = async (req, res) =>{
 
     try{
         const novoUser = await User.create({nome, email, password, dataNascimento})
-        res.status(201).json(novoUser)
+        //res.status(201).json(novoUser)
+        return res.json(novoUser)
     }catch(error){
         console.log(error)
         res.status(500).json({error:'Erro ao criar usuario.'})

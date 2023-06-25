@@ -28,4 +28,8 @@ router.post('/cadastro_usuario', userControl.createUser)
         
     });
  */
+
+router.get('/recuperar_senha', (req, res) =>{
+        res.render('recuperar_senha')
+})
   module.exports = router
